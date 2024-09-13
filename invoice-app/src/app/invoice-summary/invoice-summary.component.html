@@ -1,0 +1,53 @@
+<div class="container mt-5">
+  <div class="invoice-container border p-4 rounded shadow-sm bg-light">
+    
+  
+    <header class="invoice-header mb-4 text-center">
+      <h1 class="invoice-title text-primary">Invoice</h1>
+      <p class="invoice-date">{{ currentDate | date:'fullDate' }}</p>
+    </header>
+
+  
+<section class="customer-details mb-4">
+  <h2 class="section-title mb-3 text-primary">Customer Details</h2>
+  <div class="detail-item">
+    <strong>Name:</strong> {{ formData?.customer.name }}
+  </div>
+  <div class="detail-item">
+    <strong>Email:</strong> {{ formData?.customer.email }}
+  </div>
+  <div class="detail-item">
+    <strong>Contact Number:</strong> {{ formData?.customer.contact }}
+  </div>
+  <div class="detail-item">
+    <strong>Address:</strong> {{ formData?.customer.address }}
+  </div>
+</section>
+
+
+<section class="order-details mb-4">
+  <h2 class="section-title mb-3 text-primary">Order Details</h2>
+  <div *ngFor="let order of formData?.orders; let i = index" class="order-item mb-3 border p-3 rounded bg-white shadow-sm">
+    <div class="order-detail">
+      <strong>Product:</strong> {{ getProductName(order.product) }}
+    </div>
+    <div class="order-detail">
+      <strong>Price:</strong> {{ order.price | currency:'INR':'symbol':'1.2-2' }}
+    </div>
+    <div class="order-detail">
+      <strong>Quantity:</strong> {{ order.quantity }}
+    </div>
+    <div class="order-detail">
+      <strong>Amount:</strong> {{ (order.price * order.quantity) | currency:'INR':'symbol':'1.2-2' }}
+    </div>
+  </div>
+</section>
+
+
+  
+    <section class="total-amount mt-4 text-right">
+      <h3>Total Amount: {{ calculateTotalAmount() | currency:'INR':'symbol':'1.2-2' }}</h3>
+    </section>
+
+  </div>
+</div>

@@ -1,0 +1,88 @@
+input.ng-invalid.ng-dirty,
+select.ng-invalid.ng-dirty {
+  border: 1px solid red;
+}
+
+textarea.ng-invalid.ng-dirty {
+  border: 1px solid red;
+}
+
+.error {
+  color: red;
+}
+
+
+/* General Form Styling */
+form {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+/* Input Fields Styling */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Styling for invalid fields */
+input.ng-dirty.ng-invalid,
+select.ng-dirty.ng-invalid,
+textarea.ng-dirty.ng-invalid {
+  border: 1px solid red;
+}
+
+/* Error Messages Styling */
+.error {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Button Styling */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button[type="button"] {
+  background-color: #6c757d;
+}
+
+/* Layout for Order Details */
+div > div {
+  margin-bottom: 1rem;
+}
+
+button[type="button"] {
+  margin-top: 0.5rem;
+}
+
+h3 {
+  margin-top: 1rem;
+  color: #333;
+}
+

@@ -1,0 +1,22 @@
+
+
+.summary-container {
+  background-color: #f8f9fa; 
+}
+
+.section-title {
+  font-size: 1.5rem; 
+}
+
+.customer-details p,
+.order-item p {
+  margin-bottom: 0.5rem; 
+}
+
+.order-item {
+  border: 1px solid #dee2e6; 
+}
+
+.total-amount {
+  font-weight: bold; 
+}
